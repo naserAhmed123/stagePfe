@@ -53,7 +53,7 @@ export default function TechnicienPage() {
     };
 
     try {
-      const response = await axios.post("http://localhost:8080/api/technicien/save", technicienData);
+      await axios.post("http://localhost:8080/api/technicien/save", technicienData);
       setAlert({ variant: "success", title: "Succès", message: "Inscription réussie !" });
 
     } catch (error) {

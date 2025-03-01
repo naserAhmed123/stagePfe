@@ -31,7 +31,7 @@ export default function DefaultInputs() {
     };
 
     try {
-      const response = await axios.post("http://localhost:8080/api/service-intervention/save", serviceInterventionData);  // Remplace l'URL de ton API
+      await axios.post("http://localhost:8080/api/service-intervention/save", serviceInterventionData);
       setAlert({ variant: "success", title: "Succès", message: "Inscription réussie !" });
     } catch (error) {
       setAlert({ variant: "error", title: "Erreur", message: "Erreur lors de l'inscription." });
